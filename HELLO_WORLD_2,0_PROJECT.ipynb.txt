@@ -1,0 +1,93 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "HELLO WORLD 2,0  PROJECT",
+      "provenance": [],
+      "collapsed_sections": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "9BQP9LtnOtH-"
+      },
+      "outputs": [],
+      "source": [
+        "\n",
+        "import random\n",
+        "print(\"Let's play Rock,Paper,Scissor!\")\n",
+        "\n",
+        "outcomes = ['Rock', 'Paper', 'Scissor']\n",
+        "\n",
+        "WON = 1\n",
+        "LOST = 0\n",
+        "SCORE = \"Try again!\"\n",
+        "user_p=0\n",
+        "comp_p=0\n",
+        "\n",
+        "def result(user,a):\n",
+        "  if user>a:\n",
+        "     print(\"\\nYOU WON!\\n\")\n",
+        "     print(\"SCORE=\",user)\n",
+        "     print(\"Bot=\",a)\n",
+        "  elif user<a:\n",
+        "     print(\"\\nYOU LOST!\\n\")\n",
+        "     print(\"SCORE=\",user)\n",
+        "     print(\"Bot=\",a)\n",
+        "  else:\n",
+        "     print(\"It was a Tie!!,\\n\",SCORE)\n",
+        "  \n",
+        "\n",
+        "time=int(input(\"How many times you want to play:\"))\n",
+        "\n",
+        "for i in range (0,time):\n",
+        " user = input(\"\\nYou:\")\n",
+        " a = random.choice(outcomes)\n",
+        "print(\"Bot:\",a)\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "if  a==\"Rock\"  :\n",
+        "   if user==\"Paper\":\n",
+        "    user_p=user_p+1\n",
+        "   elif user==\"Scissor\":\n",
+        "    comp_p=comp_p+1\n",
+        "   else:\n",
+        "    print(\"It was a Tie!!,\\n\",SCORE)\n",
+        "\n",
+        "elif a==\"Scissor\"  :\n",
+        "    if user==\"Rock\":\n",
+        "      user_p=user_p+1\n",
+        "    elif user==\"Paper\":\n",
+        "      comp_p=comp_p+1\n",
+        "    else:\n",
+        "      print(\"It was a Tie!!,\\n\",SCORE)\n",
+        "\n",
+        "elif a==\"Paper\":\n",
+        "    if user==\"Scissor\":\n",
+        "     user_p=user_p+1\n",
+        "    elif user==\"Rock\":\n",
+        "     comp_p=comp_p+1\n",
+        "    else :\n",
+        "     print(\"It was a Tie!!,\\n\",SCORE)\n",
+        "\n",
+        "\n",
+        "result(user_p,comp_p)"
+      ]
+    }
+  ]
+}
